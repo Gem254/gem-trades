@@ -1,5 +1,8 @@
-const loginBtn = document.getElementById("loginBtn");
+const appId = "33IsXHOsY1092ufzgmaN8";
+const redirectUri = "https://gem254.github.io/gem-trades/";
 
-loginBtn.addEventListener("click", () => {
-    alert("Deriv login will be connected after your app is registered with Deriv.");
+document.getElementById("loginBtn").addEventListener("click", () => {
+    const authUrl = `https://oauth.deriv.com/oauth2/authorize?app_id=${appId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
+
+    window.location.href = authUrl;
 });
