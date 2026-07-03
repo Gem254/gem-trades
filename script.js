@@ -1,7 +1,7 @@
 const loginBtn = document.getElementById("loginBtn");
 
 loginBtn.addEventListener("click", () => {
-    const appId = "33IsXHOsY1092ufzgmaN8";
+    const appId = "33IYqVohrPQRZNRNkAy5Z";
     const redirectUri = "https://gem-trades.onrender.com";
 
     const authUrl =
