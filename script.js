@@ -1,6 +1,11 @@
 const loginBtn = document.getElementById("loginBtn");
 
 loginBtn.addEventListener("click", () => {
-    window.location.href =
-        "https://oauth.deriv.com/oauth2/authorize?app_id=33IsXHOsY1092ufzgmaN8";});
+    const appId = "33IsXHOsY1092ufzgmaN8";
+    const redirectUri = "https://gem-trades.onrender.com";
 
+    const authUrl =
+        `https://oauth.deriv.com/oauth2/authorize?app_id=${appId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
+
+    window.location.href = authUrl;
+});
